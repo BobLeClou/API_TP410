@@ -3,7 +3,7 @@ import json
 
 app = Flask(__name__)
 
-with open ("./sport.json") as f:
+with open ("/API/sport.json") as f:
     sport_json = json.load(f)
 
 def sport_contains(sport_id, sport_name, sport_category, sport_json):
