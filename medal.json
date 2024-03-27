@@ -1,0 +1,33 @@
+{
+    "1": [
+        {
+            "medal_id": 1,
+            "color": "bronze",
+            "year": 2020,
+            "athlete_id": 2,
+            "sport_id": 101
+        }
+    ],
+    "2": [
+        {
+            "medal_id": 2,
+            "color": "argent",
+            "year": 2016,
+            "athlete_id": [
+                1,
+                2
+            ],
+            "sport_id": 102
+        }
+    ],
+    "3": [
+        {
+            "medal_id": 3,
+            "color": "or",
+            "year": 2016,
+            "athlete_id": 3,
+            "sport_id": 103
+        }
+    ],
+    "4": []
+}

@@ -1,0 +1,23 @@
+{
+    "1": [
+        {
+            "sport_id": 101,
+            "name": "hockey",
+            "category": "sport_collectif"
+        }
+    ],
+    "2": [
+        {
+            "sport_id": 102,
+            "name": "ski de fond",
+            "category": "sport_individuel"
+        }
+    ],
+    "3": [
+        {
+            "sport_id": 103,
+            "name": "baseball",
+            "category": "sport_collectif"
+        }
+    ]
+}

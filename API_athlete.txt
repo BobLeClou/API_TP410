@@ -1,0 +1,183 @@
+openapi: 3.0.0
+info:
+  title: API_athlete
+  version: 1.0.0
+  description: API de gestion des athlete
+  contact:
+    name: Kerrian Garat
+    email: none@none.none
+tags:
+  - name: Athlete
+    description: gestion des athlètes
+    
+components:
+  schemas:
+    Athlete:
+      type: object
+      properties:
+        athlete_id:
+          type: integer
+          format: int64
+        sport_id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        surname:
+          type: string
+        age: 
+          type: integer
+          format: int64
+        gender: 
+          type: string
+        size:
+          type: integer
+          format: int64
+        weight:
+          type: integer
+          format: int64
+        
+
+paths:
+  /Athlete:
+    get:
+      tags:
+        - Athlete
+      summary: renvoie la liste des athlètes
+      responses:
+        '200':
+          description: Liste des athlètes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Athlete'
+        '404':
+          description: Liste vide
+    
+    post:
+      tags:
+        - Athlete
+      summary: Créer un athlète
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Athlete'
+      responses:
+        '201':
+          description: Athlète créé avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Athlete'
+    
+  /Athlete/id/{AthleteID}:
+    get:
+      tags:
+        - Athlete
+      summary: Récupérer les informations d'un athlète via l'id
+      parameters:
+        - name: AthleteID
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      responses:
+        '200':
+          description: Informations de l'utilisateur récupérées avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Athlete'
+        '404':
+          description: Utilisateur non trouvé
+
+    delete:
+      tags:
+        - Athlete
+      summary: Supprimer un athlete via l'id
+      parameters:
+        - name: AthleteID
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      responses:
+        '204':
+          description: Utilisateur supprimé avec succès
+        '404':
+          description: Utilisateur non trouvé
+          
+    put:
+      tags:
+        - Athlete
+      summary: Mettre à jour les informations d'un athlète
+      parameters:
+        - name: AthleteID
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 1
+      requestBody:
+        required: true
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Athlete'
+      responses:
+        '200':
+          description: Informations de l'athlete mises à jour avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Athlete'
+        '404':
+          description: Utilisateur non trouvé
+          
+  /Athlete/name/{name}:
+    get:
+      tags:
+        - Athlete
+      summary: Récupérer les informations d'un athlète via le nom
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          example: 1
+      responses:
+        '200':
+          description: Informations de l'utilisateur récupérées avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Athlete'
+        '404':
+          description: Utilisateur non trouvé
+  
+  /Athlete/surname/{surname}:
+    get:
+      tags:
+        - Athlete
+      summary: Récupérer les informations d'un athlète via le prénom
+      parameters:
+        - name: surname
+          in: path
+          required: true
+          schema:
+            type: string
+          example: 1
+      responses:
+        '200':
+          description: Informations de l'utilisateur récupérées avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Athlete'
+        '404':
+          description: Utilisateur non trouvé
