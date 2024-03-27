@@ -3,7 +3,7 @@ import json
 
 app = Flask(__name__)
 
-with open ("C:\\Users\\Utilisateur\\Documents\\IUT\\DevCloud\\TP_flask\\athlete.json") as f:
+with open ("./athlete.json") as f:
     athlete_json = json.load(f)
 
 def athlete_contains(athlete_id, athlete_name, athlete_surname, athlete_json):
