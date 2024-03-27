@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-import waitress  # pip install waitress : serveur WSGI pour Windows / pour Linux : gunicorn
+#import waitress  # pip install waitress : serveur WSGI pour Windows / pour Linux : gunicorn
 import json
 
 app = Flask(__name__)
