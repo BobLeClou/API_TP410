@@ -3,7 +3,7 @@ import json
 
 app = Flask(__name__)
 
-with open ("C:\\Users\\Utilisateur\\Documents\\IUT\\DevCloud\\TP_flask\\medal.json") as f:
+with open ("./medal.json") as f:
     medal_json = json.load(f)
 
 def medal_contains(medal_id, color, year, medal_json):
