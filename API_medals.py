@@ -31,4 +31,4 @@ def medal(medal_id=0, medal_color="", year=0):
     return result
    
 if __name__== "__main__":
-    app.run(port=5002)
+    app.run(host="0.0.0.0", port=5002)
