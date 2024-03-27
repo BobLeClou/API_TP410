@@ -31,4 +31,4 @@ def sport(sport_id=0, sport_name="", sport_category=""):
     return result
 
 if __name__== "__main__":
-    app.run(port=5003)
+    app.run(host="0.0.0.0", port=5003)
